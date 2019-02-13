@@ -109,7 +109,7 @@ const Title = styled.div`
   letter-spacing: 0.7px;
 `;
 
-const ActionButton = styled.div`
+const ActionButton = styled.a`
   margin-top: 18px;
   font-weight: 400;
   font-size: 18px;
@@ -124,6 +124,8 @@ const ActionButton = styled.div`
   justify-content: center;
   display: flex;
   line-height: initial;
+  border: none;
+  text-decoration: none;
   box-shadow: 0px 0px 56px -8px rgba(11, 18, 23, 0.4);
   letter-spacing: initial;
   :hover {
@@ -170,7 +172,7 @@ class Front extends Component {
                 justifyContent: "space-around"
               }}
             >
-              <ActionButton>
+              <ActionButton href="https://game.bombo.pe">
                 <div>JUEGA YA</div>
               </ActionButton>
             </div>
