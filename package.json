@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "next": "^8.0.0",
+    "react": "^16.8.1",
+    "react-countdown-now": "^2.1.0",
+    "react-countup": "^4.1.0",
+    "react-dom": "^16.8.1",
+    "react-scroll-trigger": "^0.5.3",
+    "react-tweet-embed": "^1.1.1",
+    "react-twitter-embed": "^2.0.4",
+    "react-waypoint": "^8.1.0",
+    "redux": "^4.0.1",
+    "scrollmonitor-react": "^2.4.1",
+    "styled-components": "^4.1.3",
+    "video-react": "^0.13.2"
+  },
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  }
+}
