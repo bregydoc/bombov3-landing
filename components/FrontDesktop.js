@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import styled, { keyframes } from "styled-components";
-import ScrollTrigger from "react-scroll-trigger";
 
 const TextAnim = keyframes`
 
@@ -153,7 +152,6 @@ class FrontDesktop extends Component {
   render() {
     return (
       <Background>
-
         <div style={{ position: "relative" }}>
           <BomboLogo src="/static/b.png" />
           <Title>

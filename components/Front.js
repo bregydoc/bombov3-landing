@@ -23,7 +23,7 @@ const BAnim = keyframes`
 `;
 
 const Background = styled.div`
-  background-color: #0b1217;
+  background-color: #000617;
   display: block;
   width: 100%;
   overflow: hidden;
