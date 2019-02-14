@@ -60,8 +60,11 @@ const VideoFilter = styled.div`
 
 const Content = styled.div`
   display: flex;
-  width: 50%;
+  width: 100%;
   height: 100%;
+  // transform: translateX(100%);
+  position: relative;
+  z-index: 4;
 `;
 
 const BomboLogo = styled.img`
@@ -78,12 +81,11 @@ const Message = styled.div`
   z-index: 5;
   display: flex;
   background-color: #28e3ba;
-  margin-top: -10%;
+  margin-top: -60px;
   padding: 20px 20px;
   width: 100%;
   text-align: center;
   color: #0b1217;
-
   font-family: "Muli", sans-serif;
   vertical-align: middle;
   flex-flow: column;
@@ -95,15 +97,16 @@ const Message = styled.div`
 const Title = styled.div`
   z-index: 6;
   position: absolute;
-  /* width: 100%; */
+  width: 50%;
+   transform: translateX(100%);
   /* height: 100%; */
-  margin: 5px 7% 10px 7%;
+  padding: 10px 0px;
   bottom: 80px;
   font-weight: 600;
   font-size: 18px;
   font-family: "Muli", sans-serif;
   color: white;
-  text-align: center;
+  text-align: left;
   text-transform: uppercase;
   line-height: 23px;
   letter-spacing: 0.7px;
@@ -119,7 +122,6 @@ const ActionButton = styled.a`
   vertical-align: middle;
   width: fit-content;
   padding: 14px 23px 11px 23px;
-  vertical-align: middle;
   flex-flow: column;
   justify-content: center;
   display: flex;
@@ -151,31 +153,26 @@ class FrontDesktop extends Component {
   render() {
     return (
       <Background>
-        <style jsx global>{`
-          @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Muli:300,400,600|Poppins:400,800,900");
-          body {
-            padding: 0;
-            margin: 0;
-          }
-        `}</style>
+
         <div style={{ position: "relative" }}>
           <BomboLogo src="/static/b.png" />
-
           <Title>
-            <SuperMessage>
-              ¡Compite por ser el mejor DT con todos los equipos que quieras!
-            </SuperMessage>
-            <div
-              style={{
-                display: "flex",
-                width: "100%",
-                justifyContent: "space-around"
-              }}
-            >
-              <ActionButton href="https://game.bombo.pe">
-                <div>JUEGA YA</div>
-              </ActionButton>
-            </div>
+              <div style={{display: "flex", justifyContent:  "space-around"}}>
+                <SuperMessage>
+                  ¡Compite por ser el mejor DT con todos los equipos que quieras!
+                </SuperMessage>
+                <div
+                    style={{
+                      display: "flex",
+                      width: "100%",
+                      justifyContent: "center"
+                    }}
+                >
+                  <ActionButton href="https://game.bombo.pe">
+                    <div>JUEGA YA</div>
+                  </ActionButton>
+                </div>
+              </div>
           </Title>
 
           <VideoFilter />

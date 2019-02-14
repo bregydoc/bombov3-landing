@@ -28,6 +28,13 @@ class Home extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
         </Head>
+          <style jsx global>{`
+          @import url("https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600|Muli:300,400,600|Poppins:400,800,900");
+          body {
+            padding: 0;
+            margin: 0;
+          }
+        `}</style>
               <Desktop>
                   <FrontDesktop />
                   <Body>
