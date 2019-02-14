@@ -96,7 +96,7 @@ const CountDownSub = styled.div`
   word-spacing: 8px;
 `;
 
-const MobileView = props => {
+const DesktopView = props => {
     return (
         <div>
             <BomboExplain>
@@ -218,9 +218,9 @@ const MobileView = props => {
     );
 };
 
-MobileView.propTypes = {
+DesktopView.propTypes = {
     onEnter: PropTypes.func,
     onLeave: PropTypes.func
 };
 
-export default MobileView;
+export default DesktopView;

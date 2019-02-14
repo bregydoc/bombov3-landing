@@ -5,6 +5,8 @@ import React from "react";
 import Footer from "../components/Footer";
 import MobileView from "../components/MobileView";
 import Responsive from 'react-responsive';
+import DesktopView from "../components/DesktopView";
+import FrontDesktop from "../components/FrontDesktop";
 
 const Body = styled.div`
   background-color: #0b1217;
@@ -26,25 +28,31 @@ class Home extends React.Component {
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta charSet="utf-8" />
         </Head>
-        <Front />
-
-        {/*<MediaQuery maxDeviceWidth={700}>*/}
-
-        {/*</MediaQuery>*/}
-          <div>
-              <Desktop>Desktop or laptop</Desktop>
+              <Desktop>
+                  <FrontDesktop />
+                  <Body>
+                    <DesktopView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
+                  </Body>
+              </Desktop>
               <Tablet>
+                  <Front />
                   <Body>
                         <MobileView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
                   </Body>
               </Tablet>
               <Mobile>
+                  <Front />
                   <Body>
                         <MobileView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
                   </Body>
               </Mobile>
-              <Default>Not mobile (desktop or laptop or tablet)</Default>
-          </div>
+              <Default>
+                  <FrontDesktop />
+                  <Body>
+                        <DesktopView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
+                  </Body>
+              </Default>
+
 
 
 
