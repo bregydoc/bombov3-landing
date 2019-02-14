@@ -60,9 +60,9 @@ const UtilLink = styled.div`
 `;
 
 class Footer extends Component {
-  static propTypes = {
-    prop: PropTypes
-  };
+  // static propTypes = {
+  //   prop: PropTypes
+  // };
 
   render() {
     return (

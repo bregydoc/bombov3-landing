@@ -4,6 +4,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "../components/Footer";
 import MobileView from "../components/MobileView";
+import Responsive from 'react-responsive';
 
 const Body = styled.div`
   background-color: #0b1217;
@@ -11,6 +12,11 @@ const Body = styled.div`
   width: 100%;
   overflow: hidden;
 `;
+
+const Desktop = props => <Responsive {...props} minWidth={992} />;
+const Tablet = props => <Responsive {...props} minWidth={768} maxWidth={991} />;
+const Mobile = props => <Responsive {...props} maxWidth={767} />;
+const Default = props => <Responsive {...props} minWidth={768} />;
 
 class Home extends React.Component {
   render() {
@@ -21,10 +27,26 @@ class Home extends React.Component {
           <meta charSet="utf-8" />
         </Head>
         <Front />
-        <Body>
-        <MobileView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
 
-        </Body>
+        {/*<MediaQuery maxDeviceWidth={700}>*/}
+
+        {/*</MediaQuery>*/}
+          <div>
+              <Desktop>Desktop or laptop</Desktop>
+              <Tablet>
+                  <Body>
+                        <MobileView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
+                  </Body>
+              </Tablet>
+              <Mobile>
+                  <Body>
+                        <MobileView onEnter={() => (this.startCounter ? this.startCounter() : null)} onLeave={() => console.log("AAA")}/>
+                  </Body>
+              </Mobile>
+              <Default>Not mobile (desktop or laptop or tablet)</Default>
+          </div>
+
+
 
         <Footer />
       </div>
