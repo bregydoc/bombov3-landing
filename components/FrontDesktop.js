@@ -97,7 +97,7 @@ const Title = styled.div`
   z-index: 6;
   position: absolute;
   width: 50%;
-   transform: translateX(100%);
+  transform: translateX(100%);
   /* height: 100%; */
   padding: 10px 0px;
   bottom: 80px;
@@ -155,28 +155,29 @@ class FrontDesktop extends Component {
         <div style={{ position: "relative" }}>
           <BomboLogo src="/static/b.png" />
           <Title>
-              <div style={{display: "flex", justifyContent:  "space-around"}}>
-                <SuperMessage>
-                  ¡Compite por ser el mejor DT con todos los equipos que quieras!
-                </SuperMessage>
-                <div
-                    style={{
-                      display: "flex",
-                      width: "100%",
-                      justifyContent: "center"
-                    }}
-                >
-                  <ActionButton href="https://game.bombo.pe">
-                    <div>JUEGA YA</div>
-                  </ActionButton>
-                </div>
+            <div style={{ display: "flex", justifyContent: "space-around" }}>
+              <SuperMessage>
+                ¡Compite por ser el mejor DT con todos los equipos que quieras!
+              </SuperMessage>
+              <div
+                style={{
+                  display: "flex",
+                  width: "100%",
+                  justifyContent: "center"
+                }}
+              >
+                <ActionButton href="https://game.bombo.pe">
+                  <div>JUEGA YA</div>
+                </ActionButton>
               </div>
+            </div>
           </Title>
 
           <VideoFilter />
-          <Video playsInline autoPlay loop muted>
+          {/* <Video playsInline autoPlay loop muted>
             <source src={"static/b01.mp4"} type="video/mp4" />
-          </Video>
+          </Video> */}
+          <img style={{ width: "100%", height: "auto" }} src="static/a.jpg" />
         </div>
         <Content>
           <Message>

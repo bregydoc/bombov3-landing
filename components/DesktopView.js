@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import dynamic from "next/dynamic";
 import CountUp from "react-countup";
@@ -7,8 +7,8 @@ import Countdown from "react-countdown-now";
 import { TwitterTimelineEmbed } from "react-twitter-embed";
 
 const Waypoint = dynamic(() => import("react-waypoint"), {
-    loading: () => <p>loading</p>,
-    ssr: false
+  loading: () => <p>loading</p>,
+  ssr: false
 });
 
 const BomboShield = styled.img`
@@ -50,7 +50,7 @@ const ContentWithIcon = styled.div`
 `;
 
 const Separator = styled.img`
-  width: 80%;
+  width: 28%;
   height: auto;
   margin: 8px 0;
   text-align: center;
@@ -97,147 +97,157 @@ const CountDownSub = styled.div`
 `;
 
 const DesktopView = props => {
-    return (
-        <div>
-            <BomboExplain>
-                <BomboShield src="static/shield.png" />
-                <Question>¿Qué es Bombo?</Question>
-                <div  style={{width: "100%", display: "flex", justifyContent: "center"}}>
-                <div style={{width: "50%"}}>
-                <Content center  size="20">
-                    Bombo te permite armar tu once ideal todas las fechas de
-                    diferentes torneos. El rendimiento en vida real de los jugadores
-                    que elijas te hará ganar!.
-                </Content>
-                </div>
-                </div>
-                <div  style={{width: "100%", display: "flex", justifyContent: "center"}}>
-                    <div style={{width: "50%"}}>
-                <Content center color={"#3271FF"} size="20">
-                    ¡Los equipos con mayor puntaje al final de la fecha ganarán dinero
-                    real!
-                </Content></div></div>
-
-                <Content center color="#28E3BA" bold size="22">
-                    ¡REPARTIMOS 1000 SOLES TODAS LAS FECHAS!
-                </Content>
-                <br/>
-                <div>
-                    <Separator src="static/separator.png" />
-                </div>
-                <br/>
-                <div style={{width: "100%", display: "flex", justifyContent: "space-around"}}>
-                    <ContentWithIcon style={{width: "40%"}}>
-                        <div>
-                            <Icon src="static/cup.png" />
-                        </div>
-                        <ContentTitle center color="#38E2BA">
-                            Total en premios repartidos
-                        </ContentTitle>
-                        <ContentCounter center size="48">
-                            <Waypoint
-                                onEnter={props.onEnter}
-                                onLeave={props.onLeave}
-                            />
-                            <CountUp
-                                delay={2}
-                                start={0}
-                                end={13000.0}
-                                prefix="s/ "
-                                separator=","
-                                decimals={2}
-                                bold
-                                duration={4.5}
-                                onStart={() => console.log("STARTTT")}
-                            >
-                                {({ countUpRef, start }) => {
-                                    this.startCounter = start;
-                                    return <span ref={countUpRef} />;
-                                }}
-                                )}
-                            </CountUp>
-                        </ContentCounter>
-                        <ContentTitle center color="#38E2BA">
-                            Total de ganadores
-                        </ContentTitle>
-                        <ContentCounter center size="48">
-                            <CountUp
-                                end={720}
-                                delay={2}
-                                // prefix="s/ "
-                                // separator=","
-                                // decimals={2}
-                                bold
-                                duration={5.75}
-                            />
-                        </ContentCounter>
-                    </ContentWithIcon>
-                    <ContentWithIcon style={{width: "40%"}}>
-                        {/*<div>*/}
-                            {/*<Separator src="static/separator.png" />*/}
-                        {/*</div>*/}
-                        <div>
-                            <Icon src="static/watch.png" size="16%" />
-                        </div>
-                        <ContentTitle center color="#38E2BA">
-                            ¡Arma tus equipos e inscríbelos!
-                        </ContentTitle>
-                        <ContentTitle center color="white" size="18">
-                            Quedan
-                        </ContentTitle>
-                        <ContentCounter center size="48">
-                            <Countdown
-                                date={Date.parse("2019-02-16T21:00:00")}
-                                onComplete={delta => console.log("delta")}
-                            />
-                        </ContentCounter>
-                        <CountDownSub center size="14" color="#28E3BA">
-                            {"Días Horas Minutos Segundos"}
-                        </CountDownSub>
-                        <ContentTitle center color="white" size="16">
-                            <div style={{ margin: "2px 20px 20px 20px" }}>
-                                Para que de inicio la competencia de la primera fecha del Fútbol
-                                Peruano en Bombo.
-                            </div>
-                        </ContentTitle>
-                    </ContentWithIcon>
-                </div>
-                <br/>
-                <br/>
-                <div>
-                    <Separator src="static/separator.png" />
-                </div>
-                <br/>
-
-                <div style={{width: "100%", display: "flex", justifyContent: "center"}}>
-                    <div style={{width: "50%"}}>
-                    <ContentWithIcon>
-                        {/*<div>*/}
-                            {/*<Separator src="static/separator.png" />*/}
-                        {/*</div>*/}
-                        <ContentTitle center color="#38E2BA">
-                            Mundo Bombo
-                        </ContentTitle>
-                        <div style={{ margin: "20px 40px" }}>
-                            <TwitterTimelineEmbed
-                                sourceType="url"
-                                url="https://twitter.com/bomboperu"
-                                options={{ height: 550 }}
-                                theme="dark"
-                            />
-                        </div>
-                    </ContentWithIcon>
-                    </div>
-                </div>
-
-            </BomboExplain>
+  return (
+    <div>
+      <BomboExplain>
+        <BomboShield src="static/shield.png" />
+        <Question>¿Qué es Bombo?</Question>
+        <div
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <div style={{ width: "50%" }}>
+            <Content center size="20">
+              Bombo te permite armar tu once ideal todas las fechas de
+              diferentes torneos. El rendimiento en vida real de los jugadores
+              que elijas te hará ganar!.
+            </Content>
+          </div>
         </div>
-    );
+        <div
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <div style={{ width: "50%" }}>
+            <Content center color={"#3271FF"} size="20">
+              ¡Los equipos con mayor puntaje al final de la fecha ganarán dinero
+              real!
+            </Content>
+          </div>
+        </div>
+
+        <Content center color="#28E3BA" bold size="22">
+          ¡REPARTIMOS 1000 SOLES TODAS LAS FECHAS!
+        </Content>
+        <br />
+        <div>
+          <Separator src="static/separator.png" />
+        </div>
+        <br />
+        <div
+          style={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around"
+          }}
+        >
+          <ContentWithIcon style={{ width: "40%" }}>
+            <div>
+              <Icon src="static/cup.png" />
+            </div>
+            <ContentTitle center color="#38E2BA">
+              Total en premios repartidos
+            </ContentTitle>
+            <ContentCounter center size="48">
+              <Waypoint onEnter={props.onEnter} onLeave={props.onLeave} />
+              <CountUp
+                delay={2}
+                start={0}
+                end={13000.0}
+                prefix="s/ "
+                separator=","
+                decimals={2}
+                bold
+                duration={4.5}
+                onStart={() => console.log("STARTTT")}
+              >
+                {({ countUpRef, start }) => {
+                  this.startCounter = start;
+                  return <span ref={countUpRef} />;
+                }}
+                )}
+              </CountUp>
+            </ContentCounter>
+            <ContentTitle center color="#38E2BA">
+              Total de ganadores
+            </ContentTitle>
+            <ContentCounter center size="48">
+              <CountUp
+                end={720}
+                delay={2}
+                // prefix="s/ "
+                // separator=","
+                // decimals={2}
+                bold
+                duration={5.75}
+              />
+            </ContentCounter>
+          </ContentWithIcon>
+          <ContentWithIcon style={{ width: "40%" }}>
+            {/*<div>*/}
+            {/*<Separator src="static/separator.png" />*/}
+            {/*</div>*/}
+            <div>
+              <Icon src="static/watch.png" size="16%" />
+            </div>
+            <ContentTitle center color="#38E2BA">
+              ¡Arma tus equipos e inscríbelos!
+            </ContentTitle>
+            <ContentTitle center color="white" size="18">
+              Quedan
+            </ContentTitle>
+            <ContentCounter center size="48">
+              <Countdown
+                date={Date.parse("2019-02-16T21:00:00")}
+                onComplete={delta => console.log("delta")}
+              />
+            </ContentCounter>
+            <CountDownSub center size="14" color="#28E3BA">
+              {"Días Horas Minutos Segundos"}
+            </CountDownSub>
+            <ContentTitle center color="white" size="16">
+              <div style={{ margin: "2px 20px 20px 20px" }}>
+                Para que de inicio la competencia de la primera fecha del Fútbol
+                Peruano en Bombo.
+              </div>
+            </ContentTitle>
+          </ContentWithIcon>
+        </div>
+        <br />
+        <br />
+        <div>
+          <Separator src="static/separator.png" />
+        </div>
+        <br />
+
+        <div
+          style={{ width: "100%", display: "flex", justifyContent: "center" }}
+        >
+          <div style={{ width: "50%" }}>
+            <ContentWithIcon>
+              {/*<div>*/}
+              {/*<Separator src="static/separator.png" />*/}
+              {/*</div>*/}
+              <ContentTitle center color="#38E2BA">
+                Mundo Bombo
+              </ContentTitle>
+              <div style={{ margin: "20px 40px" }}>
+                <TwitterTimelineEmbed
+                  sourceType="url"
+                  url="https://twitter.com/bomboperu"
+                  options={{ height: 550 }}
+                  theme="dark"
+                />
+              </div>
+            </ContentWithIcon>
+          </div>
+        </div>
+      </BomboExplain>
+    </div>
+  );
 };
 
 DesktopView.propTypes = {
-    onEnter: PropTypes.func,
-    onLeave: PropTypes.func
+  onEnter: PropTypes.func,
+  onLeave: PropTypes.func
 };
 
 export default DesktopView;

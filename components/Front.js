@@ -179,9 +179,10 @@ class Front extends Component {
           </Title>
 
           <VideoFilter />
-          <Video playsInline autoPlay loop muted>
+          {/* <Video playsInline autoPlay loop muted>
             <source src={"static/b01.mp4"} type="video/mp4" />
-          </Video>
+          </Video> */}
+          <img style={{ width: "100%", height: "auto" }} src="static/b.jpg" />
         </div>
         <Content>
           <Message>
