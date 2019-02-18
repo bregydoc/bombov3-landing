@@ -138,7 +138,7 @@ const MobileView = props => {
               separator=","
               decimals={2}
               bold
-              duration={4.5}
+              duration={10.0}
               onStart={() => console.log("STARTTT")}
             >
               {({ countUpRef, start }) => {
@@ -159,7 +159,7 @@ const MobileView = props => {
               // separator=","
               // decimals={2}
               bold
-              duration={5.75}
+              duration={10.75}
             />
           </ContentCounter>
         </ContentWithIcon>
