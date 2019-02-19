@@ -180,7 +180,7 @@ const MobileView = props => {
 
           <ContentCounter center size="48">
             <Countdown
-              date={Date.parse("2019-02-16T21:00:00")}
+              date={Date.parse("2019-02-22T16:30:00")}
               onComplete={delta => console.log("delta")}
             />
           </ContentCounter>
